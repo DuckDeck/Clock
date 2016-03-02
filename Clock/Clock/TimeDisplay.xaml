@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="Clock.TimeDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <Grid x:Name="Grid" Background="Transparent" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <!-- The background “off” segments -->
+        <TextBlock FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" Opacity=".1">
+           <!-- It’s important not to have whitespace between the runs!-->
+           <Run x:Name="TimeBackgroundRun">88:88</Run>
+        </TextBlock>
+        <TextBlock Grid.Column="1" FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" Text=":"  Opacity=".1">
+            
+        </TextBlock>
+        <TextBlock Grid.Column="2" FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" Opacity=".1">
+            <Run x:Name="SecondsBackgroundRun">88</Run>
+        </TextBlock>
+        <!-- The foreground “on” segments -->
+        <TextBlock FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" >
+         <!-- It’s important not to have whitespace between the runs!-->
+         <Run x:Name="TimeRun"/>
+        </TextBlock>
+        <TextBlock x:Name="tbxSecondColon" FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" Text=":" Grid.Column="1" >
+         <!-- It’s important not to have whitespace between the runs!-->
+         
+        </TextBlock>
+        <TextBlock FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" Grid.Column="2" >
+         <!-- It’s important not to have whitespace between the runs!-->
+         <Run x:Name="SecondsRun"/>
+        </TextBlock>
+        <!-- AM / PM -->
+        <!--<TextBlock FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" x:Name="AMTextBlock" Grid.Column="1" Text="AM" HorizontalAlignment="Center" Margin="4,0,0,0" />
+        <TextBlock FontFamily="Assets/Font/QUARTZMS.TTF#Quartz MS" x:Name="PMTextBlock" Grid.Column="1" Text="PM" HorizontalAlignment="Center" Margin="4,0,0,0"/>-->
+    </Grid>
+</UserControl>

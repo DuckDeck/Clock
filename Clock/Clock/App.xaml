@@ -1,0 +1,32 @@
+﻿<Application
+    x:Class="Clock.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clock"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <Style x:Key="MarkersBig" TargetType="Rectangle">
+            <Setter Property="Width" Value="3"></Setter>
+            <Setter Property="Height" Value="8"></Setter>
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <SolidColorBrush Color="White"></SolidColorBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="MarkersSmall" TargetType="Rectangle">
+            <Setter Property="Width" Value="1"></Setter>
+            <Setter Property="Height" Value="4"></Setter>
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <SolidColorBrush Color="White"></SolidColorBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="MarkersNum" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

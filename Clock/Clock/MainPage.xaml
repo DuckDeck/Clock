@@ -1,0 +1,1069 @@
+﻿<Page
+    x:Class="Clock.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Clock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid x:Name="gridClockFace"  Height="250" Width="250">
+            <Ellipse d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" StrokeThickness="5">
+                <Ellipse.Stroke>
+                    <LinearGradientBrush >
+                        <GradientStop Color="#FF000000" Offset="0.9"/>
+                        <GradientStop  Offset="0.99"/>
+                        <GradientStop Color="#FF696969" Offset="1"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                        <GradientStop Color="#FFBDC2C4" />
+                        <GradientStop Color="#FF111112" Offset="1"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Margin="10,10,10,10" Width="230" Height="230">
+                <Ellipse.Fill>
+                    <LinearGradientBrush StartPoint="0.877,0.004" EndPoint="0.231,1" >
+                        <GradientStop Color="#FF020202" Offset="0"/>
+                        <GradientStop Color="#FF232323" Offset="0.061"/>
+                        <GradientStop Color="#FF4D4D4D" Offset="0.066"/>
+                        <GradientStop Color="#FF242424" Offset="0.5"/>
+                        <GradientStop Color="Black" Offset="0.505"/>
+                        <GradientStop Color="#FF040404" Offset="0.827"/>
+                        <GradientStop Color="#FF292929" Offset="0.966"/>
+                        <GradientStop Color="#FF2E2E2E" Offset="0.983"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Rectangle x:Name="Big05_Copy" Style="{StaticResource ResourceKey=MarkersBig}" HorizontalAlignment="Left" UseLayoutRounding="False" VerticalAlignment="Top" d:LayoutRounding="Auto">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="-1.5" Y="-111.5" />
+                        <RotateTransform Angle="30"/>
+                        <TranslateTransform X="125" Y="125"/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </Grid>
+        <Grid x:Name="MarkersBigGrid" Width="250" Height="250">
+            <Canvas x:Name="MarkersBigCanvas">
+                <Rectangle x:Name="Big00" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="0"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+
+                </Rectangle>
+                <Rectangle x:Name="Big05" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="30"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big10" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="60"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big15" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="90"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big20" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="120"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big25" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="150"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big30" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="180"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big35" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="210"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big40" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="240"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big45" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="270"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big50" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="300"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Big55" Style="{StaticResource MarkersBig}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-1.5" Y="-111.5" ></TranslateTransform>
+                            <RotateTransform Angle="330"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="MarkersSmallGrid" Height="250" Width="250">
+            <Canvas x:Name="MarkersSmallCanvas">
+                <Rectangle x:Name="small1" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="186"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small2" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="192"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small3" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="198"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small4" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="204"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small5" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="210"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small6" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="216"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small7" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="222"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small8" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="228"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small9" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="228"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small10" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="234"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small11" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="240"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small12" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="246"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small13" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="252"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small14" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="258"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small15" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="264"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small16" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="270"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small17" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="276"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small18" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="282"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small19" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="288"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small20" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="294"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small21" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="300"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small22" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="306"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small23" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="312"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small24" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="318"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small25" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="324"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small26" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="330"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small27" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="336"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small28" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="342"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small29" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="348"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small30" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="354"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small31" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="360"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small32" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="366"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small33" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="372"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small34" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="378"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small35" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="384"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small36" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="390"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small37" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="396"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small38" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="402"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small39" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="408"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small40" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="414"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small41" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="420"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small42" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="426"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small43" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="432"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small44" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="438"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small45" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="444"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small46" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="450"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small47" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="456"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small48" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="462"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small49" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="468"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small50" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="474"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small51" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="480"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small52" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="486"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small53" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="492"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small54" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="498"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small55" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="504"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small56" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="510"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small57" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="516"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small58" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="522"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small59" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="528"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="small60" Style="{StaticResource MarkersSmall}" >
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="104.25"></TranslateTransform>
+                            <RotateTransform Angle="534"></RotateTransform>
+                            <TranslateTransform X="125" Y="125"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="MakersMiliSecondsGrid" Width="250" Height="250">
+            <Canvas x:Name="MakersMiliSecondsCanvas">
+                <Rectangle x:Name="Mili0" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="180"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili1" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="216"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili2" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="252"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili3" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="288"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili4" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="322"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili5" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="358"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili6" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="394"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili7" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="430"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili8" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="466"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Mili9" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="502"></RotateTransform>
+                            <TranslateTransform X="163" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="MarkersTenSecondsGrid" Width="250" Height="250">
+            <Canvas x:Name="MarkersTenSecondsCanvas">
+                <Rectangle x:Name="Tenth0" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="180"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth1" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="216"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth2" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="252"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth3" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="288"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth4" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="322"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth5" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="358"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth6" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="394"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth7" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="430"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth8" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="466"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="Tenth9" Style="{StaticResource MarkersSmall}">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform X="-0.5" Y="29.25"></TranslateTransform>
+                            <RotateTransform Angle="502"></RotateTransform>
+                            <TranslateTransform X="87" Y="91"></TranslateTransform>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="NumGrid" Width="250" Height="250">
+            <Canvas x:Name="NumCanvas">
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num12" Text="12" VerticalAlignment="Center" Width="19" Height="19" Canvas.Left="117" HorizontalAlignment="Center" Margin="0" Canvas.Top="20"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num1" Text="1" VerticalAlignment="Center" Width="19" Height="19" Canvas.Left="169" HorizontalAlignment="Center" Margin="0" Canvas.Top="33.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num2" Text="2" VerticalAlignment="Center" Width="19" Height="19" Canvas.Left="205" HorizontalAlignment="Center" Margin="0" Canvas.Top="69.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num3" Text="3" VerticalAlignment="Center" Width="19" Height="19" Canvas.Left="218" HorizontalAlignment="Center" Margin="0" Canvas.Top="115.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num4" Text="4" VerticalAlignment="Center" Width="19" Height="19" Canvas.Left="205" HorizontalAlignment="Center" Margin="0" Canvas.Top="164.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num5" Text="5" VerticalAlignment="Center" Width="19" Height="19" Canvas.Left="169" HorizontalAlignment="Center" Margin="0" Canvas.Top="199.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num6" Text="6" VerticalAlignment="Center" Width="19" Height="19" Canvas.Left="122" HorizontalAlignment="Center" Margin="0" Canvas.Top="213.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num7" Text="7" VerticalAlignment="Center" Width="17.455" Height="17.455" Canvas.Left="72.629" HorizontalAlignment="Center" Margin="0" Canvas.Top="199.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num8" Text="8" VerticalAlignment="Center" Width="17.455" Height="17.455" Canvas.Left="37.444" HorizontalAlignment="Center" Margin="0" Canvas.Top="164.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num9" Text="9" VerticalAlignment="Center" Width="17.455" Height="17.455" Canvas.Left="23.629" HorizontalAlignment="Center" Margin="0" Canvas.Top="116.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num10" Text="10" VerticalAlignment="Center" Width="17.455" Height="17.455" Canvas.Left="37.444" HorizontalAlignment="Center" Margin="0" Canvas.Top="69.455"></TextBlock>
+                <TextBlock Style="{StaticResource MarkersNum}" x:Name="Num11" Text="11" VerticalAlignment="Center" Width="17.455" Height="17.455" Canvas.Left="72.629" HorizontalAlignment="Center" Margin="0" Canvas.Top="33.455"></TextBlock>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="NumMiliGrid" Width="250" Height="250">
+            <Canvas x:Name="NumMiliCanvas">
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="145.75" Canvas.Top="104.917" Text="6" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="13" FontSize="10" Canvas.Left="157.109" Canvas.Top="58.751" Text="10" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="134.917" Canvas.Top="78.167" Text="8" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="175" Canvas.Top="104.917" Text="4" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="184.375" Canvas.Top="77.167" Text="2" Style="{StaticResource MarkersNum}"></TextBlock>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="NumTenGrid" Width="250" Height="250">
+            <Canvas x:Name="NumTenCanvas">
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="69.666" Canvas.Top="104.917" Text="6" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="13" FontSize="10" Canvas.Left="81.081" Canvas.Top="58.751" Text="10" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="58.833" Canvas.Top="78.617" Text="8" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="99" Canvas.Top="104.917" Text="4" Style="{StaticResource MarkersNum}"></TextBlock>
+                <TextBlock Height="11" Width="8" FontSize="10" Canvas.Left="108.501" Canvas.Top="75.617" Text="2" Style="{StaticResource MarkersNum}"></TextBlock>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="MiliSecondHandGrid" Width="250" Height="250">
+            <Canvas x:Name="MiliSecondHandCanvas" Loaded="MiliSecondHandCanvas_Loaded">
+                <Canvas.Resources>
+                    <Storyboard x:Name="MiliSecondHandStoryboard">
+                        <DoubleAnimation From="-9" To="351" Duration="00:00:01" RepeatBehavior="Forever" Storyboard.TargetProperty="(Polygon.RenderTransform).(RotateTransform.Angle)"
+                                         Storyboard.TargetName="MilisecondHand">
+                        </DoubleAnimation>
+                    </Storyboard>
+                </Canvas.Resources>
+                <Polygon Name="MilisecondHand" Canvas.Left="162" Canvas.Top="67" Points="0,0 2,0 2,25 0,25">
+                    <Polygon.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Offset="0" Color="White"></GradientStop>
+                            <GradientStop Offset="1" Color="DarkGray"></GradientStop>
+                        </LinearGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.RenderTransform>
+                        <RotateTransform x:Name="miliSecondHandAngle" Angle="0" CenterX="1" CenterY="25"></RotateTransform>
+                    </Polygon.RenderTransform>
+                </Polygon>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="TenthsSecondHandGrid" Width="250" Height="250">
+            <Canvas x:Name="TenthsSecondHandCanvas" Loaded="TenthsSecondHandCanvas_Loaded">
+                <Canvas.Resources>
+                    <Storyboard x:Name="TenthsSecondHandStoryboard">
+                        <DoubleAnimation From="0" To="360" Duration="00:00:10" RepeatBehavior="Forever" Storyboard.TargetProperty="(Polygon.RenderTransform).(RotateTransform.Angle)"
+                                         Storyboard.TargetName="TenthsSecondHand">
+                        </DoubleAnimation>
+                    </Storyboard>
+                </Canvas.Resources>
+                <Polygon Name="TenthsSecondHand" Canvas.Left="86" Canvas.Top="67" Points="0,0 2,0 2,25 0,25">
+                    <Polygon.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Offset="0" Color="White"></GradientStop>
+                            <GradientStop Offset="1" Color="DarkGray"></GradientStop>
+                        </LinearGradientBrush>
+                    </Polygon.Fill>
+                    <Polygon.RenderTransform>
+                        <RotateTransform x:Name="TenthsSecondHandAngle" Angle="0" CenterX="1" CenterY="25"></RotateTransform>
+                    </Polygon.RenderTransform>
+                </Polygon>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="NumClockGrid" Width="250" Height="250">
+            <Canvas x:Name="NumClockCanvas">
+                <local:TimeDisplay  x:Name="TimerDisplayer" FontSize="20"  Foreground="Red" Canvas.Left="83" Canvas.Top="137" Width="90" Height="28"></local:TimeDisplay>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="NumDateGrid" Width="250" Height="250">
+            <Canvas x:Name="NumDateCanvas">
+                <TextBlock  x:Name="tbxDate" TextAlignment="Center" Foreground="Red" Canvas.Left="71" Canvas.Top="169" Width="114"></TextBlock>
+            </Canvas>
+        </Grid>
+        <Grid x:Name="ClockHandGrid" Height="250" Width="250">
+            <Canvas x:Name="ClockHandCanvas" >
+                <Canvas x:Name="SecondsHandCanvas" Loaded="SecondsHandCanvas_Loaded">
+                    <Canvas.Resources>
+                        <Storyboard x:Name="SecondsHandStoryboard">
+                            <DoubleAnimation From="0" To="360" Duration="00:01:00" RepeatBehavior="Forever" Storyboard.TargetProperty="(Polygon.RenderTransform).(RotateTransform.Angle)"
+                                         Storyboard.TargetName="SecondHand">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </Canvas.Resources>
+                    <Polygon x:Name="SecondHand" Canvas.Top="30" Canvas.Left="124" Points="0,0 2,0 2,95 0,95">
+                        <Polygon.Fill>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Offset="0" Color="White"></GradientStop>
+                                <GradientStop Offset="1" Color="DarkGray"></GradientStop>
+                            </LinearGradientBrush>
+                        </Polygon.Fill>
+                        <Polygon.RenderTransform>
+                            <RotateTransform x:Name="SecondHandAngle" Angle="0" CenterX="1" CenterY="95"></RotateTransform>
+                        </Polygon.RenderTransform>
+                    </Polygon>
+                </Canvas>
+                <Canvas x:Name="MinutesHandCanvas" Loaded="MinutesHandCanvas_Loaded">
+                    <Canvas.Resources>
+                        <Storyboard x:Name="MinutesHandStoryboard">
+                            <DoubleAnimation From="0" To="360" Duration="01:00:00" RepeatBehavior="Forever" Storyboard.TargetProperty="(Polygon.RenderTransform).(RotateTransform.Angle)"
+                                         Storyboard.TargetName="MinuteHand">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </Canvas.Resources>
+                    <Polygon x:Name="MinuteHand" Canvas.Top="45" Canvas.Left="123" Points="0,5 2.5,0 1,0 4,5 4,80 0,80">
+                        <Polygon.Fill>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Offset="0" Color="White"></GradientStop>
+                                <GradientStop Offset="1" Color="DarkGray"></GradientStop>
+                            </LinearGradientBrush>
+                        </Polygon.Fill>
+                        <Polygon.RenderTransform>
+                            <RotateTransform x:Name="MinuteHandAngle" Angle="0" CenterX="2.5" CenterY="80"></RotateTransform>
+                        </Polygon.RenderTransform>
+                    </Polygon>
+                </Canvas>
+                <Canvas x:Name="HoursHandCanvas" Loaded="HoursHandCanvas_Loaded">
+                    <Canvas.Resources>
+                        <Storyboard x:Name="HoursHandStoryboard">
+                            <DoubleAnimation From="0" To="360" Duration="12:00:00" RepeatBehavior="Forever" Storyboard.TargetProperty="(Polygon.RenderTransform).(RotateTransform.Angle)"
+                                         Storyboard.TargetName="HourHand">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </Canvas.Resources>
+                    <Polygon x:Name="HourHand" Canvas.Top="65" Canvas.Left="121" Points="0,5 3,0 5,0 8,5 8,60 0,60">
+                        <Polygon.Fill>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Offset="0" Color="White"></GradientStop>
+                                <GradientStop Offset="1" Color="DarkGray"></GradientStop>
+                            </LinearGradientBrush>
+                        </Polygon.Fill>
+                        <Polygon.RenderTransform>
+                            <RotateTransform x:Name="HourHandAngle" Angle="0" CenterX="4.5" CenterY="60"></RotateTransform>
+                        </Polygon.RenderTransform>
+                    </Polygon>
+                </Canvas>
+            </Canvas>
+        </Grid>
+        
+        <Grid x:Name="CenterCircleGrid" Height="250" Width="250">
+            <Canvas x:Name="CenterCircleCanvas" Height="10" Width="10">
+                <Ellipse Width="10" Height="10">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush StartPoint="0.877,0.004" EndPoint="0.23,1">
+                            <GradientStop Color="#FF020202" Offset="0"/>
+                            <GradientStop Color="#FF232323" Offset="0.061"/>
+                            <GradientStop Color="#FF4D4D4D" Offset="0.066"/>
+                            <GradientStop Color="#FF242424" Offset="0.5"/>
+                            <GradientStop Color="Black" Offset="0.505"/>
+                            <GradientStop Color="#FF040404" Offset="0.827"/>
+                            <GradientStop Color="#FF292929" Offset="0.966"/>
+                            <GradientStop Color="#FF2E2E2E" Offset="0.983"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Canvas>
+        </Grid>
+        
+    </Grid>
+</Page>
